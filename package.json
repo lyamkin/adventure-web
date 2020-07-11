@@ -1,0 +1,14 @@
+{
+  "name": "sibtours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile" : "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Andrey Lyamkin",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

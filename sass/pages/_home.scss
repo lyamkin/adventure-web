@@ -10,6 +10,12 @@
     background-size: cover;
     background-attachment: fixed;
     clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 100%, 50% 95%, 0 100%);
-    margin-top: -3rem;
+    margin-top: -5rem;
     
+}
+
+.section-tours {
+    background-color: $color-grey-background;
+    padding: 15rem 0 15rem 0;
+    margin-top: -5rem;
 }

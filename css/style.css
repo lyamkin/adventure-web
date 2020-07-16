@@ -453,6 +453,38 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  color: #eee;
+  font-size: 1.4rem; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 2rem; }
+  .footer__link:link, .footer__link:visited {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #333;
+    transition: all .3s; }
+  .footer__link:hover, .footer__link:active {
+    color: #27ae60;
+    transform: rotate(5deg) scale(1.3); }
+  .footer__copyright {
+    font-size: 1.4rem;
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 20rem 0;

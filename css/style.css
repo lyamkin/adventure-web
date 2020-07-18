@@ -413,6 +413,58 @@ body {
   .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
     opacity: 1; }
 
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s; }
+  .popup:target {
+    visibility: visible;
+    opacity: 1; }
+  .popup__content {
+    width: 75%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .6s; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__image {
+    width: 100%;
+    display: block; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1rem 3rem; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 1px solid #eee;
+    hyphens: auto; }
+  .popup__close {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    text-decoration: none;
+    font-size: 3rem;
+    display: inline-block;
+    line-height: 1;
+    color: #777; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }

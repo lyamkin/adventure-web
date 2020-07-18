@@ -5,7 +5,19 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 10px. 1em=16. 10/16*100=62.5%
+
+    @include response(tablet-landscape) {
+        font-size: 56.25%; //9px. 9/16*100=56.25% < 1200px?
+    }
+
+    @include response(tablet-portrait) {
+        font-size: 50%; //8px. 8/16*100=50% < 900px?
+    }
+
+    @include response(large-desktop) {
+        font-size: 75%; //12px. 12/16*100=75% 
+    }
 }
 
 body {

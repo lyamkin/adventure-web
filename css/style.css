@@ -1,3 +1,17 @@
+/*
+phone                   < 600px
+tablet-portrait         600px - 900px
+tablet-landscape        900px - 1200px
+default                 1200px - 1800px
+large-desktop           > 1800px 
+*/
+/*
+1em=16px - default browser settings
+600/16 = 37.5em
+900/16 = 56.25em
+1200/16 = 75em
+1800/16 = 112.5em
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -33,6 +47,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;

@@ -5,3 +5,39 @@
         clear: both;
     }
 }
+
+/*
+phone                   < 600px
+tablet-portrait         600px - 900px
+tablet-landscape        900px - 1200px
+default                 1200px - 1800px
+large-desktop           > 1800px 
+*/
+
+/*
+1em=16px - default browser settings
+600/16 = 37.5em
+900/16 = 56.25em
+1200/16 = 75em
+1800/16 = 112.5em
+*/
+
+@mixin response($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }   
+    };
+
+    @if $breakpoint == tablet-portrait  {
+        @media (max-width: 56.25em) { @content }   
+    };
+
+    @if $breakpoint == tablet-landscape {
+        @media (max-width: 75em) { @content }   
+    };
+
+    @if $breakpoint == large-desktop {
+        @media (min-width: 112.5em) { @content }   
+    };
+
+}
+

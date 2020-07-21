@@ -4,10 +4,17 @@
     color: $color-grey-2;
     font-size: 1.4rem;
 
+    @include response(tablet-portrait) {
+        text-align: center;
+        padding: 5rem 0 0 0;
+    }
+
     &__navigation {
         border-top: 1px solid $color-grey;
         padding-top: 2rem;
         display: inline-block;
+
+        
     }
 
     &__list {
@@ -50,6 +57,11 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include response(tablet-portrait) {
+            width: 100%;
+            float: none;
+        }
 
     }
 }

@@ -55,6 +55,13 @@
         color: inherit;
         width: 49%;
         display: inline-block;
+
+        @include response (phone) {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }   
+        }
     }
 
     &__radio-button {

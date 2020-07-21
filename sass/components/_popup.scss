@@ -10,6 +10,10 @@
     opacity: 0;
     transition: all .5s;
 
+    @include response(tablet-landscape) {
+        display: block;
+    }
+
     &:target {
         visibility: visible;
         opacity: 1;
@@ -32,12 +36,34 @@
     &__image {
         width: 100%;
         display: block;
+
+        @include response(tablet-landscape) {
+            width: 50%;
+            float: left; 
+        }
+
+        @include response(phone) {
+            width: 100%;
+            float: none; 
+        }
+
+        &--p2 {
+            @include response(phone) {
+                display: none;
+            }
+        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
 
+        @include response(tablet-landscape) {
+            display: block;
+            width: 100%;
+
+            @include clearfix;
+        }
     }
 
     &__right {
@@ -45,8 +71,12 @@
         display: table-cell;
         vertical-align: middle;
         padding: 1rem 3rem;
-        
 
+        @include response(tablet-landscape) {
+            display: block;
+            width: 100%;
+            padding: 3rem;
+        }
     }
 
     &__text {
@@ -56,6 +86,10 @@
         column-gap: 3rem;
         column-rule: 1px solid $color-grey-2;
         hyphens: auto;
+
+        @include response(tablet-portrait) {
+            column-count: 1;
+        }
 
     }
 
@@ -68,5 +102,9 @@
         display: inline-block;
         line-height: 1;
         color: $color-grey;
+
+        @include response(tablet-landscape) {
+            color: $color-black;
+        }
     }
 }

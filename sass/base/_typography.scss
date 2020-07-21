@@ -20,6 +20,11 @@ body {
         font-size: 6rem;
         font-weight: 400;
         animation: moveInLeft 1.5s ease-in;
+
+        @include response(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &-sub {
@@ -28,6 +33,10 @@ body {
         font-weight: 700;
         margin-bottom: 6rem;
         animation: moveInRight 1.5s ease-in;
+
+        @include response(phone) {
+            letter-spacing: 1rem;
+        }
 
     }
 }
@@ -44,6 +53,10 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
+
+    @include response(phone) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         text-shadow: 0 1rem 2rem rgba($color-black, .5);

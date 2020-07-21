@@ -1,6 +1,12 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
+    padding: 0 1rem;
+
+    @include response(tablet-portrait) {
+        max-width: 50rem !important;
+        float: none;
+    }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
@@ -14,6 +20,15 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
         }
+
+        @include response(tablet-portrait) {
+            width: 100% !important;
+            float: none;
+            margin-right: 0;
+            margin-bottom: 6rem;
+        }
+
+
     }
 
     .col-1-of-2 {

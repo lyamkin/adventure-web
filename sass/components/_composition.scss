@@ -9,26 +9,69 @@
         box-shadow: 0 1rem 2rem rgba($color-black, .5);
         outline-offset: 1.5rem;
 
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: 0 2rem 3rem rgba($color-black, .5);
-            z-index: 30;
-            outline: 1.5rem solid $color-primary;
+        @include response(tablet-portrait) {
+            position: relative;
+            float: left;
+            width: 33.33333%;
         }
+
+        @include response(phone) {
+            float: none;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.2);
+            box-shadow: 0 2rem 3rem rgba($color-black, .5);
+            z-index: 110;
+            outline: 1.5rem solid $color-primary;
+
+            @include response(phone) {
+                box-shadow: 0 1rem 2rem rgba($color-black, .5);
+                transform: scale(1);
+                z-index: unset;
+                outline: none;
+            }
+        }
+
 
         &--p1 {
             top: -2rem;
             left: 0;
+
+            @include response(tablet-portrait) {
+                top: 0;
+            }
         }
 
         &--p2 {
             top: 2rem;
             right: 0;
+
+            @include response(tablet-portrait) {
+                top: -1.5rem;
+                transform: scale(1.1);
+                z-index: 100;
+            }
+
+            @include response(phone) {
+                top: 0;
+                transform: scale(1);
+            }
         }
 
         &--p3 {
             top: 10rem;
             left: 20%;
+
+            @include response(tablet-portrait) {
+                top: 0;
+                left: 0;
+            }
             
         }
     }
@@ -36,5 +79,12 @@
     &:hover &__photo:not(:hover) {
         transform: scale(.9);
         box-shadow: 0 .5rem 1rem rgba($color-black, .5);
+
+        @include response(phone) {
+            transform: scale(1);
+            box-shadow: 0 1rem 2rem rgba($color-black, .5);
+        }
     }
+
+    
 }

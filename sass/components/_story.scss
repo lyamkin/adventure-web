@@ -7,8 +7,15 @@
     padding-left: 9rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
     transform: skewX(-12deg);
-    
-    
+
+    @include response(tablet-portrait) {
+        width: 100%;
+    }
+
+    @include response(phone) {
+        width: 100%;
+        transform: skewX(0);
+    } 
 
     &__figure {
         width:15rem;
@@ -19,6 +26,12 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         overflow: hidden;
+
+        @include response(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
+
+
     }
     &__img {
         height:100%;
@@ -38,6 +51,10 @@
     }
     &__text {
         transform: skewX(12deg);
+
+        @include response(phone) {
+            transform: skewX(0);
+        }
     }
 
     &:hover &__caption {

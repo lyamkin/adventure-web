@@ -46,7 +46,7 @@
         height: 23rem;
         background-size: cover;
         background-blend-mode: color;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);
+        clip-path: polygon(0% 0%, 101% 0%, 101% 101%, 50% 95%, 0% 101%);
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/baikal-tour.jpg);
@@ -131,5 +131,56 @@
         font-size: 8rem;
         font-weight: 300;
 
+    }
+
+    @include response (tablet-portrait) {
+        height: auto;
+        perspective: none;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .8);
+        overflow: hidden;
+        background-color: $color-white;
+        border: none;
+
+        &__side {  
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            border-radius: unset;
+            box-shadow: none;
+            transition: none;
+            
+
+            &--back {
+                transform: none;
+                clip-path: polygon(0% 5%, 50% 0%, 101% 5%, 101% 101%,0% 101%);
+                
+                
+            } 
+        }
+
+        &:hover &__side--front {
+            transform: none;
+        }
+
+        &:hover &__side--back {
+            transform: none;
+            
+        }
+
+        &__cta {
+            color: $color-white;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            text-align: center;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
     }
 }

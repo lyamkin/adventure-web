@@ -62,9 +62,24 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+
+                        <img srcset="img/nat-1-800.jpg 800w, img/nat-1-400.jpg 400w, img/nat-1-300.jpg 300w, img/nat-1-150.jpg 150w,"
+                             sizes="(max-width: 37.5em) 400px, (max-width: 56.25em) 150px, (max-width: 75em) 300px, 800px" 
+                             src="img/nat-1-800.jpg"
+                             alt="Photo 1"
+                             class="composition__photo composition__photo--p1">
+
+                        <img srcset="img/nat-2-800.jpg 800w, img/nat-2-400.jpg 400w, img/nat-2-300.jpg 300w, img/nat-2-150.jpg 150w,"
+                             sizes="(max-width: 37.5em) 400px, (max-width: 56.25em) 150px, (max-width: 75em) 300px, 800px" 
+                             src="img/nat-2-800.jpg"
+                             alt="Photo 2"
+                             class="composition__photo composition__photo--p2">
+
+                        <img srcset="img/nat-3-800.jpg 800w, img/nat-3-400.jpg 400w, img/nat-3-300.jpg 300w, img/nat-3-150.jpg 150w,"
+                             sizes="(max-width: 37.5em) 400px, (max-width: 56.25em) 150px, (max-width: 75em) 300px, 800px" 
+                             src="img/nat-3-800.jpg"
+                             alt="Photo 3"
+                             class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -248,7 +263,13 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__figure">
-                        <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
+
+                        <img 
+                            srcset="img/nat-8-600.jpg 600w, img/nat-8-300.jpg 300w"
+                            sizes="(max-width: 75em) 21vw, 600px"
+                            src="img/nat-8-600.jpg"
+                            alt="Person on a tour"
+                            class="story__img">
                         <figcaption class="story__caption">Andrea Jenkins</figcaption>
                     </figure>
                     <div class="story__text">
@@ -261,7 +282,12 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__figure">
-                        <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
+                        <img 
+                            srcset="img/nat-9-600.jpg 600w, img/nat-9-300.jpg 300w"
+                            sizes="(max-width: 75em) 21vw, 600px"
+                            src="img/nat-9-600.jpg"
+                            alt="Person on a tour"
+                            class="story__img">
                         <figcaption class="story__caption">James Ketling</figcaption>
                     </figure>
                     <div class="story__text">
@@ -339,7 +365,7 @@
             <div class="col-1-of-2">
                 <div class="footer__copyright">
                     <p class="footer__text">
-                        Built by <a href="#" class="footer__link">Andrey Lyamkin</a> based on <a href="#" class="footer__link">Jonas Schmedtmann</a> design. The online course used to build this webpage is <a href="#" class="footer__link">Advanced CSS and Sass</a>.
+                        Built by <a href="https://www.linkedin.com/in/andreylyamkin/" class="footer__link">Andrey Lyamkin</a> based on <a href="https://codingheroes.io" class="footer__link">Jonas Schmedtmann</a> design.</a>.
                     </p>
                 </div>
             </div>
@@ -350,9 +376,20 @@
     <div class="popup" id="popup">
         <div class="popup__content">
             <div class="popup__left">
-                <img src="img/nat-8.jpg" alt="Popup image" class="popup__image popup__image--p1">
-                <img src="img/nat-9.jpg" alt="Popup image" class="popup__image popup__image--p2">
 
+                <img 
+                    srcset="img/nat-8-600.jpg 600w, img/nat-8-450.jpg 450w"
+                    sizes="(max-width: 112.5em) 450px, 600px"
+                    src="img/nat-8-600.jpg"
+                    alt="Popup image"
+                    class="popup__image popup__image--p1">
+
+                <img 
+                    srcset="img/nat-9-600.jpg 600w, img/nat-9-450.jpg 450w"
+                    sizes="(max-width: 112.5em) 450px, 600px"
+                    src="img/nat-9-600.jpg"
+                    alt="Popup image"
+                    class="popup__image popup__image--p2">
             </div>
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&cross;</a>

@@ -21,11 +21,16 @@
         width:15rem;
         height: 15rem;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%); 
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        border-radius: 50%;
         transform: translateX(-3rem) skewX(12deg);
         overflow: hidden;
+
+        @supports (-webkit-shape-outside: circle()) or (shape-outside: circle()) {
+            -webkit-shape-outside: circle(50% at 50% 50%); 
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: unset;
+        }
 
         @include response(phone) {
             transform: translateX(-3rem) skewX(0);

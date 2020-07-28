@@ -49,10 +49,15 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
-    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: $color-primary;
     transition: all .2s;
+
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
     @include response(phone) {
         font-size: 2.5rem;
@@ -62,7 +67,6 @@ body {
         text-shadow: 0 1rem 2rem rgba($color-black, .5);
         transform: scale(1.02);
         transform: translateY(-2px);
-
     }
 }
 

@@ -9,16 +9,28 @@
 }
 
 .section-features {
-    background: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../../img/features.jpg");
+    background: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../img/features-1200.jpg");
     padding: 20rem 0;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 100%, 50% 95%, 0 100%);
     margin-top: -5rem;
+
+    @supports (clip-path: polygon(0 0)) {
+        clip-path: polygon(0 5%, 50% 0, 100% 5%, 100% 100%, 50% 95%, 0 100%);
+    }
 
     @include response(tablet-portrait) {
         padding: 15rem 0;
-        clip-path: polygon(0 2%, 50% 0, 100% 2%, 100% 100%, 50% 98%, 0 100%);
+        
+        @supports (clip-path: polygon(0 0)) {
+            clip-path: polygon(0 2%, 50% 0, 100% 2%, 100% 100%, 50% 98%, 0 100%);
+        }
+    }
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em), 
+           only screen and(min-width: 112.5em) {
+            background-image: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../img/features-2000.jpg");
     }
     
 }
@@ -61,22 +73,51 @@
         105deg,rgba($color-white,.9) 0%, 
         rgba($color-white,.9) 50%, 
         rgba(transparent,0) 50%), 
-        url(../img/booking.jpg);
+        url(../img/booking-1200.jpg);
     background-size: cover;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em), 
+           only screen and(min-width: 112.5em) {
+            background-image: linear-gradient(
+                105deg,rgba($color-white,.9) 0%, 
+                rgba($color-white,.9) 50%, 
+                rgba(transparent,0) 50%), 
+                url(../img/booking-1800.jpg);
+    }
 
     @include response(tablet-landscape) {
         background-image: linear-gradient(
         105deg,rgba($color-white,.9) 0%, 
         rgba($color-white,.9) 70%, 
         rgba(transparent,0) 70%), 
-        url(../img/booking.jpg);
+        url(../img/booking-1200.jpg);
+
+        @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em), 
+           only screen and(min-width: 112.5em) {
+                background-image: linear-gradient(
+                105deg,rgba($color-white,.9) 0%, 
+                rgba($color-white,.9) 70%, 
+                rgba(transparent,0) 70%), 
+                url(../img/booking-1800.jpg);
+            }
     }
 
     @include response(tablet-portrait) {
         background-image: linear-gradient(
         105deg,rgba($color-white,.9) 0%, 
         rgba($color-white,.9) 100%), 
-        url(../img/booking.jpg);
+        url(../img/booking-1200.jpg);
+
+        @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em), 
+           only screen and(min-width: 112.5em) {
+                background-image: linear-gradient(
+                105deg,rgba($color-white,.9) 0%, 
+                rgba($color-white,.9) 100%), 
+                url(../img/booking-1800.jpg);
+           }
     }
 
     &__form {

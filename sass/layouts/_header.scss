@@ -1,10 +1,20 @@
 .header {
-    background-image: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../../img/header.jpg");
+    background-image: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../img/header-1200.jpg");
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
     height: 95vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90vh, 0 100%);
+    
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+           (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em), 
+           only screen and(min-width: 112.5em) {
+                background-image: linear-gradient(to bottom,rgba($color-primary-light, 0.8), rgba($color-primary-dark,0.8)), url("../img/header-2000.jpg");
+    }
+
+    @supports (clip-path: polygon(0 0)) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90vh, 0 100%);
+    }
 
     &_text-box {
         position: absolute;
